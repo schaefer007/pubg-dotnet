@@ -2,7 +2,7 @@
 using Pubg.Net;
 using Pubg.Net.Extensions;
 
-string apiKey = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2YjM5YjVkMC03MjcxLTAxMzktNjAyNS0xZmE5ZGJlNTJlMWYiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNjE2OTkwNTEyLCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6Ii1kNmEwNTlmZi0wMzBjLTRmNGEtYWRlMi0yZGRiMGMzODNkYjQifQ.w4CE_d7XkrMv6ddWNJivrQRyC-DEY49qd5vcjY0ohWY";
+string apiKey = "key goes here";
 PubgApiConfiguration.Configure(opt => opt.ApiKey = apiKey);
 
 var playerService = new PubgPlayerService();
