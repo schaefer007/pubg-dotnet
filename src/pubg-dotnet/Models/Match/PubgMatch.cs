@@ -2,11 +2,12 @@
 using Pubg.Net.Models.Base;
 using Pubg.Net.Models.Seasons;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Pubg.Net
 {
-    public class PubgMatch : PubgShardedEntity
+    public class PubgMatch : PubgShardedEntity, IComparable<PubgMatch>
     {
         [JsonProperty]
         public string CreatedAt { get; set; }
@@ -46,5 +47,10 @@ namespace Pubg.Net
 
         [JsonProperty]
         public PubgSeasonState SeasonState { get; set; }
+
+        public int CompareTo(PubgMatch other)
+        {
+            return DateTime.Compare(DateTime.Parse(other.CreatedAt), DateTime.Parse(CreatedAt));
+        }
     }
 }
